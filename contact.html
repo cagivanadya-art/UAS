@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contact</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f6aece;
+}
+
+/* HEADER */
+.hero {
+  background: #e773ad;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 40px;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* CONTACT */
+.contact-section {
+  background: linear-gradient(135deg, #ffe4ef, #ffc1da);
+  padding: 100px 20px;
+}
+
+.contact-box {
+  max-width: 650px;
+  margin: auto;
+  background: transparent;
+}
+
+.contact-box h2 {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.contact-box label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: #e773ad;
+}
+
+/* BUTTON */
+.btn-send {
+  width: 100%;
+  background: #e773ad;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  background: #e773ad;
+  transform: scale(1.03);
+}
+
+/* FOOTER */
+
+.footer-pink .social a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink .social a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ANIMASI ===== */
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* FOOTER */
+
+.footer-pink .social a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink .social a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+:root {
+  --pink-main: #e773ad;
+  --pink-soft: #f6aece;
+  --pink-light: #ff9cc8;
+  --text-dark: #374151;
+}
+
+/* RESET */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--pink-soft);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--pink-light);
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 16px;
+}
+
+/* CARD */
+.card-soft {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+
+
+.footer-pink a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footer-pink {
+  background: #ff7eb6;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-pink .social {
+  margin-bottom: 15px;
+}
+
+.footer-pink a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+.footer-pink p {
+  color: white;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="hero">
+<h2>Kontak</h2>
+<p>Email, Instagram, WhatsApp.</p>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon text-center"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3 text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ISI HALAMAN -->
+<div class="content">
+  <div class="box">
+<section class="contact-section">
+  <div class="contact-box fade-up">
+    <h2>Contact Me</h2>
+
+    <form>
+      <label>Nama</label>
+      <input type="text" placeholder="Masukkan nama...">
+
+      <label>Email</label>
+      <input type="email" placeholder="Email kamu...">
+
+      <label>Pesan</label>
+      <textarea rows="4" placeholder="Tulis pesan..."></textarea>
+
+      <button type="submit" class="btn-send">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+  </div>
+</div>
+<footer class="footer-pink fade-up">
+  <div class="social">
+    <div class="mb-3">
+      <a href="https://wa.me/6285774150181" class="social-icon" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/lannad_ya" class="social-icon" target="_blank">Instagram</a>
+      <a href="mailto:cagivanadya@gmail.com" class="social-icon">Email</a>
+      <a href="https://github.com/cagivanadya-art" class="social-icon">GitHub</a>
+      <a href="https://discord.com/users/1373867631173439608" class="social-icon" target="_blank">Discord</a>
+    </div>
+  <p class="mt-3">© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

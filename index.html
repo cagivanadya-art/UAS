@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f6aece;
+  }
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+  .bg-pink {
+    background-color: #ff9cc8;
+  }
+
+  /* HEADER */
+.hero {
+  background: #e773ad;
+  color: #f6aece;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+  /* HERO */
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: #e773ad;
+  color: white;
+  border-radius: 0 0 40px 40px;
+}
+
+  .hero img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* FOOTER */
+  .footer-pink a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .footer-pink a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+:root {
+  --pink-main: #e773ad;
+  --pink-soft: #f6aece;
+  --pink-light: #ff9cc8;
+  --text-dark: #ffffff;
+}
+
+/* RESET */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--pink-soft);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--pink-light);
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 16px;
+}
+
+/* CARD */
+.card-soft {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+
+.footer-pink a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+}
+
+.hero {
+  background: var(--pink-main);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 40px 40px;
+}
+.footer-pink {
+  background: #ff7eb6;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-pink .social {
+  margin-bottom: 15px;
+}
+
+.footer-pink a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+.footer-pink p {
+  color: white;
+  font-size: 14px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  width: 240px;
+  height: 65px;
+  background: #ffffff;  
+  border: 2px solid #e773ad;
+  border-radius: 40px;
+  color: #e773ad;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+}
+
+.card .icon {
+  font-size: 22px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card:hover {
+  background: #e773ad;
+  color: white;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-pill {
+  background: white;
+  color: #e773ad;
+  padding: 12px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: default;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-pill:hover {
+  background: #e773ad;
+  color: white;
+  transform: translateY(-3px);
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero fade-in">
+  <img src="foto1.jpeg" alt="Profile"
+       style="width:130px;height:130px;border-radius:50%;
+       border:5px solid #f6aece;">
+
+  <h1 class="mt-3">Cagiva Nadya Salsabilla</h1>
+  <p>Web Developer | Designer | Freelancer</p>
+</section>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3 text-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container my-5 text-center">
+  <h2 class="mb-3">Tentang Saya</h2>
+
+  <p class="mb-4">
+    Saya mahasiswa Sistem Informasi yang tertarik pada Web Development,
+    UI Design, dan pembuatan website responsif.
+  </p>
+
+  <div class="button-container">
+    <div class="btn-pill">💻 HTML & CSS</div>
+    <div class="btn-pill">🎨 UI Design</div>
+    <div class="btn-pill">📱 Responsive Web</div>
+  </div>
+</section>
+
+
+
+<section class="container my-5 text-center">
+  <h2 class="mb-4">Cuplikan Karya</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <span class="icon">🌐</span>
+      <p>Website Portofolio</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">📸</span>
+      <p>Galeri Foto</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">🎬</span>
+      <p>Video Dokumentasi</p>
+    </div>
+  </div>
+
+  <a href="portofolio.html" class="btn btn-light mt-4">
+    Lihat Selengkapnya →
+  </a>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer-pink">
+  <div class="mb-3">
+    <a href="https://wa.me/6285774150181" target="_blank">WhatsApp</a>
+    <a href="https://instagram.com/lannad_ya" target="_blank">Instagram</a>
+    <a href="mailto:cagivanadya@gmail.com">Email</a>
+    <a href="https://github.com/cagivanadya-art" target="_blank">GitHub</a>
+    <a href="https://discord.com/users/1373867631173439608" target="_blank">Discord</a>
+  </div>
+  <p>© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

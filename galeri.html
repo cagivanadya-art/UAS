@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+
+body {
+  background: #f6aece;
+}
+
+/* HEADER */
+.hero {
+  background: #e773ad;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+.navbar li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 40px;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* FOOTER FIX */
+.footer-pink .social {
+  margin-bottom: 30px;
+}
+
+.footer-pink .social a {
+  margin: 0 14px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-pink .social a:hover {
+  text-decoration: underline;
+}
+
+/* GALERI */
+.galeri-section {
+  padding: 60px 20px 40px;
+}
+
+.galeri-title{
+  text-align:center;
+  font-weight:bold;
+  margin-bottom:40px;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.galeri-card {
+  background: #ffe4ec;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+.galeri-card:hover{
+  transform:translateY(-5px);
+}
+
+/* FOTO */
+.galeri-card img{
+  width:100%;
+  height: 250px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.video-thumb:hover {
+  transform: translateY(-6px);
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.video-thumb p {
+  margin: 12px 0;
+  font-weight: 600;
+  color: #db2777;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #ff9cc8;
+  font-size: 28px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* AUDIO */
+.galeri-card audio{
+  width:100%;
+  margin-top:10px;
+}
+
+.galeri-card h6{
+  margin-top:10px;
+  font-weight:bold;
+  text-align:center;
+}
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+iframe {
+  border-radius: 10px;
+  border: none;
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.footer {
+  background: #ff7eb6;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer p {
+  color: white;
+  font-size: 14px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+* {
+  max-width: 100%;
+}
+</style>
+</head>
+
+<body>
+<div class="modal fade" id="videoModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <iframe id="driveVideo"
+          width="100%" height="450"
+          allow="autoplay"
+          style="border:0; border-radius:12px;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="hero">
+<h2>Media</h2>
+<p>Kumpulan foto dan dokumentasi.</p>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3 text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="galeri-section">
+  <h2 class="galeri-title">Media</h2>
+
+  <!-- FOTO -->
+  <h4 class="mb-3">📸 Foto</h4>
+  <div class="galeri-grid mb-5">
+    <div class="galeri-card">
+      <img src="foto15.jpg">
+      <h6>Ayceee</h6>
+    </div>
+    <div class="galeri-card">
+      <img src="foto16.jpg">
+      <h6>panitia ekhem</h6>
+    </div>
+    <div class="galeri-card">
+      <img src="foto18.JPG">
+      <h6>pas foto BTS</h6>
+    </div>
+  </div>
+
+<h4 class="mb-3">🎬 Video</h4>
+
+<div class="container">
+  <div class="row g-4">
+
+    <div class="col-md-4 col-sm-6">
+      <div class="video-thumb" onclick="openDriveVideo('13L5WLNmpMYc5daUGx8kKepDrUhMSnopV')">
+        <img src="framevd1.jpg">
+        <span class="play-icon">▶</span>
+        <p>Video Perpisahan SMK</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="video-thumb" onclick="openDriveVideo('1h2p-63uABQ6zntLVdPKGjHKHhapyhBgO')">
+        <img src="framevd2.jpg">
+        <span class="play-icon">▶</span>
+        <p>Video Ciwi Ciwi</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="video-thumb" onclick="openDriveVideo('1QRHqtGLqhAfCVMivnAnF1MC4zk3co9G_')">
+        <img src="framevd3.jpg">
+        <span class="play-icon">▶</span>
+        <p>Video akuu hehe</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- AUDIO -->
+<section id="galeri-lagu" class="py-4">
+  <h4 class="mb-3">🎵 Lagu</h4>
+
+  <div class="galeri-grid">
+
+    <div class="galeri-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/3A02hWQ2ebOFDWSbAMNnpw?utm_source=generator" 
+      width="100%" height="152" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="galeri-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/0nEsLR5KTySCO9CfyC2yjg?utm_source=generator" 
+      width="100%" height="152" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
+    </div>
+
+    <div class="galeri-card">
+    <iframe data-testid="embed-iframe" style="border-radius:12px" 
+    src="https://open.spotify.com/embed/track/2vdBo4ALPYbHRUPKgtE5iC?utm_source=generator" 
+    width="100%" height="152" frameBorder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+    <a href="https://wa.me/6285774150181" target="_blank">WhatsApp</a>
+    <a href="https://instagram.com/lannad_ya" target="_blank">Instagram</a>
+    <a href="mailto:cagivanadya@gmail.com">Email</a>
+    <a href="https://github.com/cagivanadya-art">GitHub</a>
+    <a href="https://discord.com/users/1373867631173439608" target="_blank">Discord</a>
+  </div> <p>© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+function openDriveVideo(id) {
+  const iframe = document.getElementById("driveVideo");
+  iframe.src = "https://drive.google.com/file/d/" + id + "/preview";
+  new bootstrap.Modal(document.getElementById("videoModal")).show();
+}
+document.getElementById("videoModal").addEventListener("hidden.bs.modal", () => {
+  document.getElementById("driveVideo").src = "";
+});
+</script>
+</body>
+</html>
+

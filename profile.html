@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>profile</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f6aece;
+  color: #1f2937;
+}
+
+
+/* HEADER */
+.hero {
+  background: #e773ad;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 40px;
+}
+
+.box {
+  background: rgb(255, 148, 193);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* FOOTER */
+
+.footer-pink .social a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink .social a:hover {
+  text-decoration: underline;
+}
+.foto-profile {
+  transition: 0.3s ease;
+}
+
+.foto-profile:hover {
+  transform: scale(1.05);
+}
+img {
+  width: 100%;
+}
+.foto-profile {
+  width: 180px;        /* ukuran fix */
+  height: 180px;
+  object-fit: cover;   /* biar ga gepeng */
+  border-radius: 50%;  /* bulat */
+  border: 4px solid #f16fab;
+  display: block;
+  margin: 0 auto 20px;
+}
+.profile-card{
+  max-width: 700px;
+  margin: 120px auto;
+  background: #f16fab; 
+  border-radius: 18px;
+  padding: 90px 30px 40px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.15);
+  position: relative;
+  text-align: left;
+}
+.profile-data {
+  color: #ffffff;
+}
+
+.profile-data .label {
+  color: #ffffff;
+}
+
+.profile-quote {
+  color: #ffffff; /* abu halus */
+}
+
+ 
+/* FOTO BULAT */
+.profile-photo{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #e773ad;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e773ad;
+}
+
+.profile-photo img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+/* DATA */
+.profile-data .row{
+  margin-bottom: 12px;
+}
+
+.profile-data .label{
+  font-weight: bold;
+}
+
+/* QUOTE */
+.profile-quote{
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+  color:#ffffff;
+}
+
+/* RESPONSIVE */
+@media(max-width:576px){
+  .profile-card{
+    margin: 100px 15px;
+    padding: 80px 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+:root {
+  --pink-main: #e773ad;
+  --pink-soft: #f6aece;
+  --pink-light: #ff9cc8;
+  --text-dark: #374151;
+}
+
+/* RESET */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--pink-soft);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--pink-light);
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 16px;
+}
+
+/* CARD */
+.card-soft {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+.footer-pink a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+}
+.footer-pink {
+  background: #ff7eb6;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-pink .social {
+  margin-bottom: 15px;
+}
+
+.footer-pink a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+.footer-pink p {
+  color: white;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="hero">
+<h2>Profile</h2>
+<p>Perkenalan singkat tentang saya.</p>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3 text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ISI HALAMAN -->
+<section class="profile-section text-center">
+
+  <div class="profile-card">
+
+    <!-- FOTO -->
+    <div class="profile-photo">
+      <img src="foto13.jpg" alt="Foto Profil">
+    </div>
+
+    <!-- DATA -->
+    <div class="profile-data container mt-3">
+      <div class="row">
+        <div class="col-5 label">NIM</div>
+        <div class="col-7">: 251011700427</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 label">Nama Lengkap</div>
+        <div class="col-7">: Cagiva Nadya Salsabilla</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 label">Fakultas</div>
+        <div class="col-7">: Ilmu Komputer</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 label">Prodi</div>
+        <div class="col-7">: Sistem Informasi</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 label">Tanggal Lahir</div>
+        <div class="col-7">: 20 April 2007</div>
+      </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="profile-quote">
+      kopi is number one intinya mah, sedap
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer-pink fade-up">
+  <div class="social">
+    <div class="mb-3">
+      <a href="https://wa.me/6285774150181" class="social-icon" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/lannad_ya" class="social-icon" target="_blank">Instagram</a>
+      <a href="mailto:cagivanadya@gmail.com" class="social-icon">Email</a>
+      <a href="https://github.com/cagivanadya-art" class="social-icon">GitHub</a>
+      <a href="https://discord.com/users/1373867631173439608" class="social-icon" target="_blank">Discord</a>
+    </div>
+  <p class="mt-3">© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
